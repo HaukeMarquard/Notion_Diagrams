@@ -1,3 +1,5 @@
+import { get_data } from "./notion/get_data";
+
 document.addEventListener("DOMContentLoaded", function () {
   var chart = bb.generate({
     data: {
@@ -10,3 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
     bindto: "#chart",
   });
 });
+
+get_data();
+
+function executeEveryMinute() {}
+
+setInterval(executeEveryMinute, 60000);
