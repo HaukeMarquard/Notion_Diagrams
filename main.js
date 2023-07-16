@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+console.log("Hiiii");
+
 get_data();
 
 function executeEveryMinute() {}
