@@ -1,4 +1,4 @@
-import { get_data } from "./notion/get_data";
+import { get_data } from "./notion/get_data.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   var chart = bb.generate({
@@ -15,7 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 console.log("Hiiii");
 
-get_data();
+get_data()
+  .then((data) => {
+    console.log("Daten erfolgreich abgerufen:", data);
+  })
+  .catch((error) => {
+    console.error("Fehler beim Abrufen der Daten:", error);
+  });
 
 function executeEveryMinute() {}
 

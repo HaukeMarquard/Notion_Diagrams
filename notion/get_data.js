@@ -1,6 +1,6 @@
 // const { Client } = require("@notionhq/client");
 
-import { notion_secret, strom_db } from "./notion_datas";
+import { notion_secret, strom_db } from "./notion_datas.js";
 
 // print(notion_secret);
 
@@ -30,13 +30,5 @@ function get_data() {
     .then((response) => response.json())
     .then((data) => data.results);
 }
-
-fetchDatabaseData()
-  .then((data) => {
-    console.log("Daten erfolgreich abgerufen:", data);
-  })
-  .catch((error) => {
-    console.error("Fehler beim Abrufen der Daten:", error);
-  });
 
 export { get_data };
